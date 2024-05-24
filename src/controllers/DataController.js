@@ -20,10 +20,10 @@ const databaseMapping = {
 };
 
 const serverMapping = {
-    'SQLTO': 'SQLTO',
-    'SQLPO': 'SQLPO',
-    'SQLCO': 'SQLCO',
-    'SQLPM': 'SQLPM'
+    'SQLTO': 'SQLTO.unifrigo.mg',
+    'SQLPO': 'SQLPO.unifrigo.mg',
+    'SQLCO': 'SQLCO.unifrigo.mg',
+    'SQLPM': 'SQLPM.unifrigo.mg'
 };
 
 const descricaoBase = {
