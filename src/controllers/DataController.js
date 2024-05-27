@@ -67,7 +67,7 @@ module.exports = {
             let consulta = await ConsultaService.buscarChave(chave);
 
             if (consulta) {
-                const results = [];
+                const results = Array();
 
                 // Parse the JSON string to an array
                 const baseDeDadosList = JSON.parse(consulta.baseDeDados);
@@ -95,13 +95,13 @@ module.exports = {
                         var dados = result.recordset;
                         for (const dado of result.recordset) {
                             dado.base = descricaoBase[baseDeDados];
+                            results.push(dado);
                         }
-                        results.push(dados);
                     } catch (error) {
                         json.error += ` - Erro ao executar consulta na base de dados ${baseDeDados}: ${error.message}`;
                     }
                 }
-
+                console.log(results);
                 const sandbox = {
                     data: results,
                     console: console,

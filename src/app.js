@@ -16,11 +16,13 @@ server.use(express.static(path.join(__dirname, '../public')));
 
 // Roteamento das APIs
 server.use('/api', routes);
-server.use('/data', routes);
 
 // Rota para a página de consultas
 server.use('/pgconsultas', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/consulta.html'));
+});
+server.use('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views/listarConsultas.html'));
 });
 
 const PORT = process.env.PORT || 3000;

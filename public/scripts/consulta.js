@@ -53,7 +53,7 @@ function removerParametro(button) {
 
 async function executarRota() {
     const chave = document.getElementById('chave').value;
-    const response = await fetch('/data/' + chave);
+    const response = await fetch('/api/' + chave);
     const consultas = await response.json();
     const transformado = syntaxHighlight(JSON.stringify(consultas, null, 2));
     const consultasList = document.getElementById('resultadoJson');
