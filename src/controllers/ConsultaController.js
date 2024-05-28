@@ -76,7 +76,7 @@ module.exports = {
         let parametros = req.body.parametros;
 
 
-        if (chave && consulta && tratamento && baseDeDados) {  // Verificação do campo baseDeDados
+        if (chave && consulta && tratamento && baseDeDados && parametros) {  // Verificação do campo baseDeDados
             await ConsultaService.alterar(chave, consulta, tratamento, baseDeDados, parametros);  // Adicionado campo baseDeDados
             json.result = {
                 chave,

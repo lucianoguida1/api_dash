@@ -5,9 +5,15 @@ const bodyParser = require('body-parser');
 const path = require('path');
 
 const routes = require('./routes');
+const corsOptions = {
+    origin: '*', // Permitir apenas este domínio
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Permitir apenas esses métodos
+    allowedHeaders: ['Content-Type', 'Authorization'], // Permitir apenas esses cabeçalhos
+    credentials: true // Se você precisar permitir credenciais (cookies, autorização)
+};
 
 const server = express();
-server.use(cors());
+server.use(cors(corsOptions));
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json());
 
