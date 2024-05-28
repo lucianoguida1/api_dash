@@ -101,7 +101,6 @@ module.exports = {
                         json.error += ` - Erro ao executar consulta na base de dados ${baseDeDados}: ${error.message}`;
                     }
                 }
-                console.log(results);
                 const sandbox = {
                     data: results,
                     console: console,
