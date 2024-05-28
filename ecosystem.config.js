@@ -6,7 +6,11 @@ module.exports = {
             instances: 1,
             autorestart: true,
             watch: true,
-            ignore_watch: ["mydb.sqlite"],
+            ignore_watch: [
+                "node_modules",
+                "mydb.sqlite",
+                "mydb.sqlite-journal"
+            ],
             max_memory_restart: '1G'
         }
     ]
