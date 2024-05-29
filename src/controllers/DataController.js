@@ -4,8 +4,10 @@ const vm = require('vm');
 const querystring = require('querystring');
 
 const config = {
-    user: 'PLENA_SQL_MONITORIND',
-    password: 'B#BeF$@g6kGJTjdL%wi6',
+    //user: 'PLENA_SQL_MONITORIND',
+    //password: 'B#BeF$@g6kGJTjdL%wi6',
+    user: 'dbatak',
+    password: 's@_@dmin!np@',
     options: {
         encrypt: false,
         trustServerCertificate: true
